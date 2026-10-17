@@ -99,3 +99,8 @@ BME280, MPU6050 (GY-521), 28BYJ-48 step motor + ULN2003 sürücü,
 - InvenSense: MPU-6000/MPU-6050 product specification ve register map
 - Kitapçığın bölüm yapısı Jeremy Blum'un *Exploring Arduino* (Wiley, 2013)
   kitabındaki öğretim yaklaşımından esinlenmiştir.
+
+## Lisans
+
+Kodlar [MIT lisansı](LICENSE) ile paylaşılmıştır: telif bildirimini korumak
+koşuluyla serbestçe kullanabilir, değiştirebilir ve dağıtabilirsiniz.

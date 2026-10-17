@@ -238,7 +238,7 @@ int bme280_read(int32_t *t, uint32_t *p, uint32_t *h)
     return 0;
 }
 
-/* ---- OLED 128x64, SPI1 uzerinden (Lab 05 ile ayni surucu) ----
+/* ---- OLED 128x64, SPI1 uzerinden (Bolum 8 surucusu) ----
  * SCK=SCK/D13(PA5) MOSI=PWM/MOSI/D11(PA7) CS=PWM/CS/D10(PB0)
  * RES=D8(PA9) DC=PWM/D9(PC7) */
 #define OLED_SH1106   1      /* SSD1306 modulu icin 0 */

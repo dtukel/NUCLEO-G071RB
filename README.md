@@ -1,9 +1,14 @@
-# NUCLEO-G071RB ile Mikrodenetleyicileri Keşfetmek
+# Mikrodenetleyici Programlama: STM32 NUCLEO-G071RB Uygulamaları
 
-**COME327** dersinin mikrodenetleyici laboratuvarları için hazırlanan
-*"NUCLEO-G071RB ile Mikrodenetleyicileri Keşfetmek"* kitapçığının kaynak kodları.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23438009.svg)](https://doi.org/10.5281/zenodo.23438009)
+
+*"Mikrodenetleyici Programlama: STM32 NUCLEO-G071RB Uygulamaları LED'den bitirme
+projesine"* kitabının kaynak kodları.
+
+📘 **Kitap (PDF, Zenodo):** https://doi.org/10.5281/zenodo.23438009
 
 Hazırlayan: Dr. Öğr. Üyesi Dilek (Bilgin) Tükel
+([ORCID 0000-0001-5288-5996](https://orcid.org/0000-0001-5288-5996))
 
 - Kart: **STM32 NUCLEO-G071RB** (STM32G071RB, Arm Cortex-M0+)
 - Geliştirme ortamı: **STM32CubeIDE** (Empty Project)
@@ -13,8 +18,10 @@ Hazırlayan: Dr. Öğr. Üyesi Dilek (Bilgin) Tükel
 Tüm programlar STM32CubeIDE 2.2.0 ile gelen `arm-none-eabi-gcc` derleyicisiyle
 `-Wall -Wextra` seçenekleriyle uyarısız derlenmiştir.
 
-*Source code of a Turkish lab booklet for the STM32 NUCLEO-G071RB board: bare-metal,
-register-level C, no HAL. Comments are in Turkish (written without Turkish characters).*
+*Source code of the Turkish book "Mikrodenetleyici Programlama: STM32 NUCLEO-G071RB
+Uygulamaları" (DOI [10.5281/zenodo.23438009](https://doi.org/10.5281/zenodo.23438009)):
+bare-metal, register-level C for the STM32 NUCLEO-G071RB board, no HAL. Comments are in
+Turkish (written without Turkish characters).*
 
 ## Kullanım
 
@@ -97,10 +104,36 @@ BME280, MPU6050 (GY-521), 28BYJ-48 step motor + ULN2003 sürücü,
   UM2324 (NUCLEO-64 user manual), PM0223 (Cortex-M0+ programming manual)
 - Bosch Sensortec: BME280 datasheet (kompanzasyon formülleri)
 - InvenSense: MPU-6000/MPU-6050 product specification ve register map
-- Kitapçığın bölüm yapısı Jeremy Blum'un *Exploring Arduino* (Wiley, 2013)
+- Kitabın bölüm yapısı Jeremy Blum'un *Exploring Arduino* (Wiley, 2013)
   kitabındaki öğretim yaklaşımından esinlenmiştir.
+
+## Atıf / Citation
+
+Bu kodları ya da kitabı kullanırsanız lütfen kitaba atıf yapın:
+
+> Tükel, D. (Bilgin). (2026). *Mikrodenetleyici Programlama: STM32 NUCLEO-G071RB
+> Uygulamaları LED'den bitirme projesine* (v1). Zenodo.
+> https://doi.org/10.5281/zenodo.23438009
+
+```bibtex
+@book{tukel2026mikrodenetleyici,
+  author    = {Tükel, Dilek (Bilgin)},
+  title     = {Mikrodenetleyici Programlama: STM32 NUCLEO-G071RB Uygulamaları LED'den bitirme projesine},
+  year      = {2026},
+  version   = {v1},
+  publisher = {Zenodo},
+  language  = {turkish},
+  doi       = {10.5281/zenodo.23438009},
+  url       = {https://doi.org/10.5281/zenodo.23438009}
+}
+```
+
+GitHub'daki **"Cite this repository"** düğmesi de [CITATION.cff](CITATION.cff)
+dosyasından aynı bilgiyi verir.
 
 ## Lisans
 
-Kodlar [MIT lisansı](LICENSE) ile paylaşılmıştır: telif bildirimini korumak
-koşuluyla serbestçe kullanabilir, değiştirebilir ve dağıtabilirsiniz.
+- **Kodlar:** [MIT lisansı](LICENSE). Telif bildirimini korumak koşuluyla serbestçe
+  kullanabilir, değiştirebilir ve dağıtabilirsiniz.
+- **Kitap:** Zenodo'da [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+  lisansıyla yayımlanmıştır.

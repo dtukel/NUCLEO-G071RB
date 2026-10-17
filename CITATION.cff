@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "Bu kodları kullanırsanız lütfen aşağıdaki kitaba atıf yapın. / If you use this code, please cite the book below."
+title: "NUCLEO-G071RB: Mikrodenetleyici Programlama kitabının kaynak kodları"
+type: software
+authors:
+  - family-names: "Tükel"
+    given-names: "Dilek (Bilgin)"
+    orcid: "https://orcid.org/0000-0001-5288-5996"
+    affiliation: "Doğuş University"
+repository-code: "https://github.com/dtukel/NUCLEO-G071RB"
+license: MIT
+keywords:
+  - STM32
+  - NUCLEO-G071RB
+  - Cortex-M0+
+  - embedded systems
+  - bare-metal C
+  - microcontroller
+preferred-citation:
+  type: book
+  title: "Mikrodenetleyici Programlama: STM32 NUCLEO-G071RB Uygulamaları LED'den bitirme projesine"
+  authors:
+    - family-names: "Tükel"
+      given-names: "Dilek (Bilgin)"
+      orcid: "https://orcid.org/0000-0001-5288-5996"
+  year: 2026
+  publisher:
+    name: "Zenodo"
+  doi: "10.5281/zenodo.23438009"
+  url: "https://doi.org/10.5281/zenodo.23438009"
+  languages:
+    - tr

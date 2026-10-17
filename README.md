@@ -20,8 +20,7 @@ Tüm programlar STM32CubeIDE 2.2.0 ile gelen `arm-none-eabi-gcc` derleyicisiyle
 
 *Source code of the Turkish book "Mikrodenetleyici Programlama: STM32 NUCLEO-G071RB
 Uygulamaları" (DOI [10.5281/zenodo.23438009](https://doi.org/10.5281/zenodo.23438009)):
-bare-metal, register-level C for the STM32 NUCLEO-G071RB board, no HAL. Comments are in
-Turkish (written without Turkish characters).*
+register-level C for the STM32 NUCLEO-G071RB board, no HAL.*
 
 ## Kullanım
 

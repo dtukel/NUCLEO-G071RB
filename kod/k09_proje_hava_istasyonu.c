@@ -261,33 +261,33 @@ void oled_hw_init(void)
     RCC_IOPENR  |= (1u << 0) | (1u << 1) | (1u << 2);  /* GPIOA, GPIOB, GPIOC */
     RCC_APBENR2 |= (1u << 12);             /* SPI1 */
 
-    /* PA5 AF(10), PA7 AF(10), PA9 out(01) */
+    /* PA5 AF(10), PA7 AF(10), PA9 cikis(01) */
     uint32_t m = GPIOA_MODER;
     m &= ~((3u<<(5*2))|(3u<<(7*2))|(3u<<(9*2)));
     m |=  ((2u<<(5*2))|(2u<<(7*2))|(1u<<(9*2)));
     GPIOA_MODER = m;
 
     GPIOB_MODER &= ~(3u<<(0*2));
-    GPIOB_MODER |=  (1u<<(0*2));            /* PB0 out (CS) */
+    GPIOB_MODER |=  (1u<<(0*2));            /* PB0 cikis (CS) */
 
-    /* PA5, PA7 -> AF0 (SPI1_SCK / SPI1_MOSI on STM32G0) */
+    /* PA5, PA7 -> AF0 (STM32G0'da SPI1_SCK / SPI1_MOSI) */
     GPIOA_AFRL &= ~((0xFu<<(5*4))|(0xFu<<(7*4)));
-    /* AF0 = 0, nothing to set */
+    /* AF0 = 0, ayrica yazmaya gerek yok */
     GPIOA_OSPEEDR |= (3u<<(5*2))|(3u<<(7*2));
 
     GPIOC_MODER &= ~(3u<<(7*2));
-    GPIOC_MODER |=  (1u<<(7*2));            /* PC7 out */
+    GPIOC_MODER |=  (1u<<(7*2));            /* PC7 cikis */
 
     CS_HIGH(); DC_HIGH(); RES_HIGH();
 
-    /* SPI1 master, 8-bit, mode0, MSB first, BR=/16, software NSS */
+    /* SPI1 master, 8 bit, mod 0, once MSB, BR=/16, yazilim NSS */
     SPI1_CR1 = 0;
-    SPI1_CR2 = (0x7u << 8) | (1u << 12);               /* DS=8bit, FRXTH */
+    SPI1_CR2 = (0x7u << 8) | (1u << 12);               /* DS=8 bit, FRXTH */
     SPI1_CR1 = (1u << 2) | (3u << 3) | (1u << 9) | (1u << 8); /* MSTR,BR/16,SSM,SSI */
     SPI1_CR1 |= (1u << 6);                             /* SPE */
 }
 
-/* ---------------- OLED driver ---------------- */
+/* ---------------- OLED surucusu ---------------- */
 #define OLED_W 128
 #define OLED_H 64
 static uint8_t  buffer[OLED_W * OLED_H / 8];

@@ -1,6 +1,6 @@
-/* g071.h - STM32G071 register definitions used in the COME327 booklet.
- * Only the registers we use; addresses from RM0444 / STM32G071.svd.
- * Put this file in the project's Inc/ folder and write  #include "g071.h"
+/* g071.h - Kitapta kullanilan STM32G071 register tanimlari.
+ * Yalnizca kullandigimiz register'lar; adresler RM0444 / STM32G071.svd'den.
+ * Bu dosyayi projenin Inc/ klasorune koyun ve  #include "g071.h"  yazin.
  */
 #ifndef G071_H
 #define G071_H
@@ -8,13 +8,13 @@
 
 #define REG32(a)      (*(volatile uint32_t *)(a))
 
-/* ---- RCC: clock enables ---- */
+/* ---- RCC: saat acma ---- */
 #define RCC_BASE      0x40021000UL
 #define RCC_IOPENR    REG32(RCC_BASE + 0x34)   /* bit0 GPIOA, bit1 GPIOB, bit2 GPIOC  */
 #define RCC_APBENR1   REG32(RCC_BASE + 0x3C)   /* bit0 TIM2, bit17 USART2, bit21 I2C1 */
 #define RCC_APBENR2   REG32(RCC_BASE + 0x40)   /* bit12 SPI1, bit20 ADC               */
 
-/* ---- GPIO (IOPORT bus) ---- */
+/* ---- GPIO (IOPORT yolu) ---- */
 #define GPIOA_BASE    0x50000000UL
 #define GPIOB_BASE    0x50000400UL
 #define GPIOC_BASE    0x50000800UL
@@ -42,7 +42,7 @@
 #define GPIOC_ODR     REG32(GPIOC_BASE + 0x14)
 #define GPIOC_BSRR    REG32(GPIOC_BASE + 0x18)
 
-/* ---- Cortex-M0+ core: SysTick and NVIC ---- */
+/* ---- Cortex-M0+ cekirdek: SysTick ve NVIC ---- */
 #define STK_CTRL      REG32(0xE000E010UL)
 #define STK_LOAD      REG32(0xE000E014UL)
 #define STK_VAL       REG32(0xE000E018UL)
@@ -58,7 +58,7 @@
 #define EXTI_EXTICR4  REG32(EXTI_BASE + 0x6C)
 #define EXTI_IMR1     REG32(EXTI_BASE + 0x80)
 
-/* ---- TIM2 (32-bit general-purpose timer) ---- */
+/* ---- TIM2 (32 bitlik genel amacli zamanlayici) ---- */
 #define TIM2_BASE     0x40000000UL
 #define TIM2_CR1      REG32(TIM2_BASE + 0x00)
 #define TIM2_EGR      REG32(TIM2_BASE + 0x14)
@@ -78,7 +78,7 @@
 #define ADC_CHSELR    REG32(ADC_BASE + 0x28)
 #define ADC_DR        REG32(ADC_BASE + 0x40)
 
-/* ---- USART2 (ST-LINK Virtual COM Port) ---- */
+/* ---- USART2 (ST-LINK sanal COM portu) ---- */
 #define USART2_BASE   0x40004400UL
 #define USART2_CR1    REG32(USART2_BASE + 0x00)
 #define USART2_BRR    REG32(USART2_BASE + 0x0C)

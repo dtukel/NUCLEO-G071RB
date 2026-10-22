@@ -1,5 +1,5 @@
 /* Liste 5-3  k05_proje_ayarli_nefes.c - Bolum 5 projesi
- * Nefes alan LED; nefes hizini potansiyometre belirler (yaklasik 0.5 s .. 5 s).
+ * Nefes alan LED; nefes hizini potansiyometre belirler (yaklasik 0.5 s .. 4 s).
  * Gozun parlakligi dogrusal algilamamasi icin kare (gamma ~2) egrisi kullanilir.
  */
 #include "g071.h"
